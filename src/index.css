@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Global CSS Variables ── */
+:root {
+  --tech-blue: #0ea5e9;
+  --data-cyan: #06b6d4;
+  --alert-orange: #f97316;
+  --bg-primary: #0a0f1e;
+  --bg-card: #0d1526;
+  --bg-card-hover: #111d35;
+  --border-subtle: rgba(14, 165, 233, 0.2);
+  --text-primary: #e2e8f0;
+  --text-muted: #94a3b8;
+}
+
+/* ── Base ── */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tech-blue);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--data-cyan);
+}
+
+/* ── Card Glow Hover Effect ── */
+.card-glow {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.4), 0 0 40px rgba(14, 165, 233, 0.15);
+  transform: translateY(-2px);
+}
+
+/* ── Card Gradient Border ── */
+.card-gradient-border {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 0.75rem;
+}
+
+.card-gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--tech-blue), var(--data-cyan), var(--tech-blue));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ── Tab Content Transition ── */
+.tab-content {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tab-content.tab-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.tab-content.tab-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tab-content.tab-exit {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+/* ── Range Input (for capital slider) ── */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, var(--tech-blue), var(--data-cyan));
+  outline: none;
+  cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--tech-blue);
+  border: 2px solid #fff;
+  box-shadow: 0 0 8px rgba(14, 165, 233, 0.6);
+  cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--tech-blue);
+  border: 2px solid #fff;
+  box-shadow: 0 0 8px rgba(14, 165, 233, 0.6);
+  cursor: pointer;
+}
+
+/* ── Radar Sweep Animation (InspectionTab) ── */
+.radar-sweep {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(6, 182, 212, 0.35) 60deg,
+    transparent 60deg
+  );
+  animation: radar-rotate 2.5s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes radar-rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
