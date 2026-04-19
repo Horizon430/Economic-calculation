@@ -10,7 +10,7 @@ const TABS = [
   { label: '物流场景',     Component: LogisticsTab },
   { label: '巡检场景',     Component: InspectionTab },
   { label: '应急救援',     Component: EmergencyTab },
-  { label: '水质水文监测', Component: WaterQualityTab },
+  { label: '旅游观光', Component: WaterQualityTab },
 ];
 
 export default function ScenarioTabs({ activeTab, onTabChange }) {
@@ -50,9 +50,9 @@ export default function ScenarioTabs({ activeTab, onTabChange }) {
   const { Component } = TABS[visibleTab];
 
   return (
-    <div className="bg-[#0d1526] rounded-xl border border-[rgba(14,165,233,0.2)] overflow-hidden">
+    <div className="bg-[#0d1526] rounded-xl border border-[rgba(14,165,233,0.2)]">
       {/* Tab bar */}
-      <div className="flex border-b border-[rgba(14,165,233,0.15)]">
+      <div className="flex border-b border-[rgba(14,165,233,0.15)] rounded-t-xl overflow-hidden">
         {TABS.map((tab, index) => {
           const isActive = index === currentTab;
           return (

@@ -30,7 +30,7 @@ export default function Header() {
       {/* Title row */}
       <div className="flex items-center justify-between mb-3">
         <h1 className="text-2xl font-bold tracking-widest text-tech-blue">
-          低空+水域无人化智能商业体系
+          低空+水域智能商业模型
         </h1>
         <span className="text-data-cyan text-sm font-mono tabular-nums">
           {formatTime(time)}

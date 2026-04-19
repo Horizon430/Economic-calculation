@@ -75,9 +75,9 @@ function CapitalModule({ sliderValue, onSliderChange }) {
 
   return (
     <div className="card-gradient-border rounded-xl p-5 mt-6">
-      <div className="text-xs uppercase tracking-widest text-slate-400 mb-1">5亿资本金推演模型</div>
+      <div className="text-xs uppercase tracking-widest text-slate-400 mb-1">大黄鱼数量推演模型</div>
       <div className="text-sm text-slate-300 mb-4">
-        拖动滑块，查看不同投资规模下的预期收益
+        拖动滑块，查看不同大黄鱼数量规模下的预期收益
       </div>
 
       {/* Slider */}

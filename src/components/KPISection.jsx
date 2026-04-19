@@ -2,20 +2,19 @@ import { KPI_DATA } from '../constants/businessData';
 import KPICard from './KPICard';
 
 /**
- * Horizontal row of 4 KPI metric cards.
- * Passes roiToggle / onToggleRoi down to the toggle card.
+ * 海空一体化底层能力与商业壁垒 — 4 列等宽卡片区
  */
-export default function KPISection({ roiToggle, onToggleRoi }) {
+export default function KPISection() {
   return (
-    <div className="flex gap-4 w-full">
-      {KPI_DATA.map((item) => (
-        <KPICard
-          key={item.label}
-          data={item}
-          roiToggle={roiToggle}
-          onToggleRoi={onToggleRoi}
-        />
-      ))}
+    <div>
+      <p className="text-xs text-slate-500 tracking-widest uppercase mb-3">
+        海空一体化底层能力与商业壁垒
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {KPI_DATA.map((item) => (
+          <KPICard key={item.title} data={item} />
+        ))}
+      </div>
     </div>
   );
 }

@@ -2,48 +2,52 @@
 
 export const KPI_DATA = [
   {
-    label: '初期总投入',
-    value: 152,
-    unit: '万元',
-    subtitle: '轻资产高杠杆，不含软硬件研发费',
+    title: '空域',
+    subtitle: '载人载物高效协同，构建低空路网资产',
     color: '#0ea5e9',
-    isToggle: false,
+    icon: '🛩',
+    metrics: [
+      { label: '有人机规划航线', value: 12, unit: '条' },
+      { label: '无人机常态航线', value: 35, unit: '条' },
+    ],
   },
   {
-    label: '年均运维成本',
-    value: 20.6,
-    unit: '万元',
-    subtitle: '极致成本管控',
+    title: '水空',
+    subtitle: '高载荷无缝接驳，击穿传统物流成本底线',
     color: '#06b6d4',
-    isToggle: false,
+    icon: '🚢',
+    metrics: [
+      { label: '水面协同航路', value: 18, unit: '条' },
+      { label: '吨公里综合成本', value: null, unit: '', tag: '大幅下降 ▼', tagColor: '#22c55e' },
+    ],
   },
   {
-    label: '目标回报周期',
-    value: null,
-    unit: '',
-    subtitle: '可切换3年/5年视图',
+    title: '低空智能立体管控',
+    subtitle: '以算力驱动运力，全域空地海一体化协作',
     color: '#8b5cf6',
-    isToggle: true,
-    roiValues: {
-      '3年': { value: 3.7, unit: '年', note: '激进增长假设下' },
-      '5年': { value: 4.8, unit: '年', note: '稳健经营假设下' },
-    },
+    icon: '🧠',
+    metrics: [
+      { label: '核心能力', value: null, unit: '', tag: '先规划·后运营' },
+      { label: '航线冲突率', value: 0, unit: '%' },
+    ],
   },
   {
-    label: '单点位年盈利预期',
-    value: 41.6,
-    unit: '万元',
-    subtitle: '服务费33.6万 + 附加收益8万',
+    title: '智能管控空域',
+    subtitle: '软硬一体闭环，降本增效，实现商业价值',
     color: '#f97316',
-    isToggle: false,
+    icon: '📡',
+    metrics: [
+      { label: '商业转化', value: null, unit: '', tag: '赋能高频复购' },
+      { label: '综合降本率', value: 45, unit: '%' },
+    ],
   },
 ];
 
 export const OPS_STATUS = [
   { label: '已开通航线', value: 12, unit: '条' },
-  { label: '机巢/起降点', value: 8, unit: '个' },
-  { label: '单次运输能力', value: '300-500', unit: 'kg/次' },
-  { label: '日均总运力', value: '4.8', unit: '吨/日' },
+  { label: '已开通航路', value: 12, unit: '条' },
+  { label: '空域管控面积', value: '22,200', unit: '平方公里' },
+  { label: '智能终端数量', value: '30', unit: '个' },
 ];
 
 export const COST_COMPARE = {

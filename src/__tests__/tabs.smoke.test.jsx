@@ -24,24 +24,24 @@ describe('Tab components render without errors', () => {
   it('LogisticsTab renders key content', () => {
     render(<LogisticsTab />);
     expect(screen.getByText('跨海岛高频短途物流网络')).toBeInTheDocument();
-    expect(screen.getByText('6级')).toBeInTheDocument();
+    expect(screen.getByText('5000-6000')).toBeInTheDocument();
   });
 
   it('InspectionTab renders key content', () => {
     render(<InspectionTab />);
     expect(screen.getByText('海空立体协同与高技术壁垒溢价')).toBeInTheDocument();
-    expect(screen.getByText(/绝对定价权/)).toBeInTheDocument();
+    expect(screen.getByText(/缺载具/)).toBeInTheDocument();
   });
 
   it('EmergencyTab renders key content', () => {
     render(<EmergencyTab />);
-    expect(screen.getByText('海空应急救援响应网络')).toBeInTheDocument();
-    expect(screen.getByText('6-8')).toBeInTheDocument();
+    expect(screen.getByText('城市级海空应急基础设施网络')).toBeInTheDocument();
+    expect(screen.getByText('2000-3000')).toBeInTheDocument();
   });
 
   it('WaterQualityTab renders key content', () => {
     render(<WaterQualityTab />);
-    expect(screen.getByText('全时域水环境数据资产化')).toBeInTheDocument();
-    expect(screen.getByText('1次/10分钟')).toBeInTheDocument();
+    expect(screen.getByText('稀缺空域资产的规模化载人变现')).toBeInTheDocument();
+    expect(screen.getByText('旅游观光')).toBeInTheDocument();
   });
 });
